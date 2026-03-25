@@ -43,26 +43,30 @@ const Stats = () => {
           <div className="grid grid-cols-3 items-center">
             <div className="flex items-center justify-center">
               <div className="relative w-[220px] h-[90px]">
-                <Image
-                  src="/logos/Edulavo.png"
-                  alt="Edulavo logo"
-                  fill
-                  className="object-contain"
-                />
+                <a href="https://www.edulavo.com" target="_blank">
+                  <Image
+                    src="/logos/Edulavo.png"
+                    alt="Edulavo logo"
+                    fill
+                    className="object-contain"
+                  />
+                </a>
               </div>
             </div>
 
             <div className="flex flex-col items-center">
               <div className="relative w-[220px] h-[90px]">
-                <Image
-                  src="/logos/Phitron.png"
-                  alt="Phitron logo"
-                  fill
-                  className="object-contain"
-                />
+                <a href="https://phitron.io/" target="_blank">
+                  <Image
+                    src="/logos/Phitron.png"
+                    alt="Phitron logo"
+                    fill
+                    className="object-contain"
+                  />
+                </a>
               </div>
 
-              <p className="text-gray-200 text-[14px] mt-4 text-center leading-relaxed">
+              <p className="text-gray-200 text-[14px] mt-6 text-center leading-relaxed ">
                 Makes Their Dream come
                 <br />
                 in reality.
@@ -71,12 +75,14 @@ const Stats = () => {
 
             <div className="flex items-center justify-center">
               <div className="relative w-[220px] h-[90px]">
-                <Image
-                  src="/logos/ProgrammingHero.png"
-                  alt="Zenyora logo"
-                  fill
-                  className="object-contain"
-                />
+                <a href="https://www.programming-hero.com/" target="_blank">
+                  <Image
+                    src="/logos/ProgrammingHero.png"
+                    alt="ph logo"
+                    fill
+                    className="object-contain"
+                  />
+                </a>
               </div>
             </div>
           </div>

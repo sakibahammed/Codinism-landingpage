@@ -23,8 +23,8 @@ export default function GenyoraSection() {
           <div className="absolute w-full flex justify-center">
             <p className="text-center text-xl mt-6 leading-relaxed md:text-2xl">
               With codinism,{" "}
-              <a href="https://www.zenyora.com/" target="_blank">
-                Zenyora
+              <a href="https://www.edulavo.com" target="_blank">
+                Edulavo
               </a>{" "}
               <br /> just brought to life
             </p>
