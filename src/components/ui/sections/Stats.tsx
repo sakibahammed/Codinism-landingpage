@@ -41,7 +41,7 @@ const Stats = () => {
         {/* Main Content */}
         <div className="relative z-[1] w-full max-w-5xl px-8">
           <div className="grid grid-cols-3 items-center">
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-revert">
               <div className="relative w-[220px] h-[90px]">
                 <a href="https://www.edulavo.com" target="_blank">
                   <Image
@@ -54,11 +54,12 @@ const Stats = () => {
               </div>
 
               <p className="text-gray-200 text-[14px] mt-6  leading-relaxed pr-8">
-                Edulavo is a personal AI-powered skill coach designed to understand how people learn
-                and adapt to their goals. It creates a smart, personalized learning path tailored to
-                individual pace and ambitions—helping users grow faster and more effectively. Join
-                25,000+ daily learners already leveling up with Edulavo.
+                Edulavo is an AI-powered skill coach that adapts to individual learning styles and
+                goals. It creates personalized paths to help users grow
               </p>
+              <span className="text-gray-200 text-[18px] font-bold mt-2  leading-relaxed pr-8">
+                Trusted by 25,000+ daily learners.
+              </span>
             </div>
 
             <div className="flex flex-col items-center">
@@ -75,9 +76,11 @@ const Stats = () => {
 
               <p className="text-gray-200 text-[14px] mt-6 leading-relaxed ">
                 Phitron helps build a strong foundation and secure a career with a super supportive
-                learning platform. Master competitive programming, problem solving, logic building,
-                and core programming through structured, hands-on learning. Join 10,000+ daily
-                learners advancing toward a strong tech future with Phitron.
+                learning platform.
+                <br />
+                <span className="text-gray-200 text-[18px] font-bold mt-2  leading-relaxed pl-0">
+                  Trusted by 10,000+ daily learners.
+                </span>
               </p>
             </div>
 
@@ -95,11 +98,12 @@ const Stats = () => {
 
               <p className="text-gray-200 text-[14px] mt-6  leading-relaxed pl-8">
                 Programming Hero is on a mission to deliver personalized learning and empower
-                individuals to kick-start their careers. With engaging, interactive content and a
-                learner-focused approach, it helps users build real-world skills effectively.
-                Trusted by 40,000+ daily learners, Programming Hero is shaping the next generation
-                of developers.
+                individuals to kick-start careers.
               </p>
+
+              <span className="text-gray-200 text-[18px] font-bold mt-2  leading-relaxed pl-8">
+                Trusted by 40,000+ daily learners.
+              </span>
             </div>
           </div>
         </div>
