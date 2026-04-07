@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error": "#490006",
+                    "on-secondary-fixed": "#19248e",
+                    "on-background": "#ffffff",
+                    "surface-container-high": "#201f1f",
+                    "on-tertiary-fixed": "#400042",
+                    "tertiary-fixed-dim": "#e88ae1",
+                    "error-dim": "#d7383b",
+                    "surface-bright": "#2c2c2c",
+                    "surface-dim": "#0e0e0e",
+                    "primary-dim": "#0070ea",
+                    "inverse-on-surface": "#565554",
+                    "background": "#0e0e0e",
+                    "on-surface-variant": "#adaaaa",
+                    "tertiary-fixed": "#f797f0",
+                    "secondary": "#8a95ff",
+                    "error-container": "#9f0519",
+                    "secondary-dim": "#8a95ff",
+                    "tertiary": "#ffaaf7",
+                    "primary-fixed": "#6c9fff",
+                    "on-secondary": "#000a73",
+                    "surface-container-lowest": "#000000",
+                    "on-tertiary-container": "#610e63",
+                    "surface-container": "#1a1919",
+                    "primary-container": "#6c9fff",
+                    "primary": "#84adff",
+                    "on-secondary-container": "#c9cdff",
+                    "on-secondary-fixed-variant": "#3a45ac",
+                    "tertiary-dim": "#e88ae1",
+                    "secondary-fixed": "#cbceff",
+                    "inverse-surface": "#fcf8f8",
+                    "surface-variant": "#262626",
+                    "on-primary": "#002d64",
+                    "surface-container-low": "#131313",
+                    "outline-variant": "#494847",
+                    "outline": "#777575",
+                    "secondary-fixed-dim": "#babfff",
+                    "secondary-container": "#2f3aa1",
+                    "primary-fixed-dim": "#5091ff",
+                    "on-error-container": "#ffa8a3",
+                    "on-tertiary": "#6d1b6d",
+                    "inverse-primary": "#005bc1",
+                    "surface-container-highest": "#262626",
+                    "tertiary-container": "#f797f0",
+                    "surface-tint": "#84adff",
+                    "on-primary-fixed-variant": "#002a60",
+                    "on-tertiary-fixed-variant": "#6c1a6c",
+                    "surface": "#0e0e0e",
+                    "on-primary-fixed": "#000000",
+                    "on-primary-container": "#00214e",
+                    "error": "#ff716c",
+                    "on-surface": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Inter"],
+                    "label": ["Space Grotesk"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      body {
+        background-color: #0e0e0e;
+        color: #ffffff;
+        font-family: 'Inter', sans-serif;
+      }
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-card {
+        background: rgba(26, 25, 25, 0.4);
+        backdrop-filter: blur(12px);
+      }
+      .product-badge {
+        @apply px-3 py-1 rounded-full text-[10px] font-label uppercase tracking-widest bg-primary/10 border border-primary/20 text-primary;
+      }
+    </style>
+</head>
+<body class="selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#0e0e0e]/60 backdrop-blur-xl shadow-[0_0_40px_rgba(132,173,255,0.06)]">
+<div class="flex justify-between items-center px-12 py-6 max-w-[1440px] mx-auto">
+<span class="text-2xl font-bold tracking-tighter text-[#84adff] font-['Plus_Jakarta_Sans']">Codinism</span>
+<div class="hidden md:flex gap-10 items-center">
+<a class="text-gray-400 hover:text-[#84adff] transition-colors duration-300 font-['Plus_Jakarta_Sans'] font-bold tracking-tight" href="#">Start Working With Us</a>
+<a class="text-gray-400 hover:text-[#84adff] transition-colors duration-300 font-['Plus_Jakarta_Sans'] font-bold tracking-tight" href="#">Why Codinism</a>
+<a class="text-gray-400 hover:text-[#84adff] transition-colors duration-300 font-['Plus_Jakarta_Sans'] font-bold tracking-tight" href="#">Contact</a>
+</div>
+<button class="bg-gradient-to-r from-primary to-primary-dim text-on-primary px-8 py-3 rounded-full font-headline font-bold active:scale-95 transition-transform hover:shadow-[0_0_20px_rgba(132,173,255,0.3)]">
+                See Services
+            </button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-background/80 to-background"></div>
+<img class="w-full h-full object-cover opacity-30 grayscale" data-alt="abstract dark server room with glowing blue ethernet cables and futuristic data processing lights in a cinematic atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1nx38DUo-HB2bkqAsjKDRG_KN1oW75j6swA6uf661UVK2_Iw4qXucuY0anXWW7kzaJfXH8K5hIIxB6EAWJ8PfgkLlJaiuaawZN2E4tjyku71nmPHHXJggwf0Ybcsq67gjjP4pEXUyjMs-2fQqeyTgpydj-TU71R1QA4MQZPgm6APoKOZd7YAm4oO0DM9BvnyjxTq1SRPBE6WVfLKd8mCR3zLuiV7doKYjHrOLg3kIVuOaIxceCnrEisETZXaI5uo-du51FPWG_6s"/>
+</div>
+<div class="relative z-10 max-w-[1440px] mx-auto px-12 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="space-y-8">
+<span class="inline-block font-label text-primary uppercase tracking-[0.3em] text-xs">Engineering Excellence</span>
+<h1 class="text-6xl md:text-7xl font-headline font-extrabold leading-[1.1] text-on-background">
+                        Helping companies scale engineering without increasing <span class="text-primary">headcount</span>.
+                    </h1>
+<p class="text-xl text-on-surface-variant font-body max-w-xl leading-relaxed">
+                        We deploy elite engineering squads that integrate seamlessly into your workflow, delivering high-velocity software architecture at scale.
+                    </p>
+<div class="flex items-center gap-6">
+<button class="bg-gradient-to-r from-primary to-primary-dim text-on-primary px-10 py-4 rounded-full font-headline font-bold text-lg hover:shadow-[0_0_30px_rgba(132,173,255,0.4)] transition-all">
+                            Let's Talk
+                        </button>
+<button class="border border-outline-variant hover:bg-surface-container transition-colors text-on-surface px-10 py-4 rounded-full font-headline font-bold text-lg">
+                            View Portfolio
+                        </button>
+</div>
+</div>
+<div class="hidden md:block relative">
+<div class="absolute -inset-10 bg-primary/10 blur-[120px] rounded-full"></div>
+<div class="relative glass-card border border-outline-variant/20 rounded-3xl p-10 transform skew-y-2">
+<div class="flex items-center gap-4 mb-8">
+<div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-container">code</span>
+</div>
+<div class="space-y-1">
+<div class="w-32 h-2 bg-primary/30 rounded-full"></div>
+<div class="w-20 h-2 bg-primary/10 rounded-full"></div>
+</div>
+</div>
+<div class="space-y-4">
+<div class="h-4 w-full bg-surface-variant rounded"></div>
+<div class="h-4 w-3/4 bg-surface-variant rounded"></div>
+<div class="h-4 w-5/6 bg-surface-variant rounded"></div>
+</div>
+<div class="mt-12 flex justify-end">
+<div class="px-4 py-2 rounded-lg bg-primary/20 border border-primary/40 text-primary text-xs font-label">Status: Scaling...</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trusted By (Logo Cloud) -->
+<section class="py-20 bg-surface-container-low">
+<div class="max-w-[1440px] mx-auto px-12">
+<p class="text-center font-label text-outline text-sm uppercase tracking-widest mb-12">Trusted by Global Innovators</p>
+<div class="flex flex-wrap justify-center items-center gap-16 md:gap-24 opacity-60 grayscale hover:grayscale-0 transition-all">
+<span class="text-2xl font-bold font-headline">Edulavo</span>
+<span class="text-2xl font-bold font-headline">Programming Hero</span>
+<span class="text-2xl font-bold font-headline">Phitron</span>
+<span class="text-2xl font-bold font-headline">Zenora</span>
+</div>
+</div>
+</section>
+<!-- Our Expertise (Bento Grid) -->
+<section class="py-32 px-12 max-w-[1440px] mx-auto">
+<div class="mb-20 space-y-4">
+<span class="font-label text-primary text-sm uppercase tracking-[0.2em]">Our Capabilities</span>
+<h2 class="text-5xl font-headline font-bold">Technological Edge</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Web3 -->
+<div class="md:col-span-2 group relative overflow-hidden bg-surface-container rounded-3xl p-10 border border-outline-variant/10 hover:border-primary/30 transition-all">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 blur-[80px] -mr-32 -mt-32"></div>
+<div class="relative z-10">
+<span class="material-symbols-outlined text-primary text-4xl mb-6" style="font-variation-settings: 'FILL' 1;">currency_bitcoin</span>
+<h3 class="text-3xl font-headline font-bold mb-4">Web3 Ecosystems</h3>
+<p class="text-on-surface-variant max-w-md">DeFi protocols, smart contract auditing, and decentralized governance structures built on robust blockchain foundations.</p>
+</div>
+</div>
+<!-- Shopify/Wordpress -->
+<div class="group relative overflow-hidden bg-surface-container-high rounded-3xl p-10 border border-outline-variant/10">
+<span class="material-symbols-outlined text-secondary text-4xl mb-6">shopping_bag</span>
+<h3 class="text-2xl font-headline font-bold mb-4">E-Commerce Architecture</h3>
+<p class="text-on-surface-variant text-sm">Enterprise-grade Shopify and Wordpress custom integrations for high-volume retail.</p>
+</div>
+<!-- Blockchain -->
+<div class="group relative overflow-hidden bg-surface-container-high rounded-3xl p-10 border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">link</span>
+<h3 class="text-2xl font-headline font-bold mb-4">Blockchain</h3>
+<p class="text-on-surface-variant text-sm">Private and public ledger implementations tailored to specific security requirements.</p>
+</div>
+<!-- Big Data -->
+<div class="group relative overflow-hidden bg-surface-container rounded-3xl p-10 border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">database</span>
+<h3 class="text-2xl font-headline font-bold mb-4">Big Data</h3>
+<p class="text-on-surface-variant text-sm">Scalable data pipelines and real-time analytics for massive dataset processing.</p>
+</div>
+<!-- Mobile & Fullstack -->
+<div class="group relative overflow-hidden bg-surface-container rounded-3xl p-10 border border-outline-variant/10">
+<span class="material-symbols-outlined text-secondary text-4xl mb-6">devices</span>
+<h3 class="text-2xl font-headline font-bold mb-4">Mobile &amp; Fullstack</h3>
+<p class="text-on-surface-variant text-sm">Cross-platform mobile apps and resilient cloud-native web infrastructures.</p>
+</div>
+</div>
+</section>
+<!-- Featured Products Section -->
+<section class="py-32 bg-surface-container-low border-y border-outline-variant/5">
+<div class="max-w-[1440px] mx-auto px-12">
+<div class="mb-20 flex justify-between items-end">
+<div class="space-y-4">
+<span class="font-label text-primary text-sm uppercase tracking-[0.2em]">Ecosystem</span>
+<h2 class="text-5xl font-headline font-bold">Industry-Leading Products</h2>
+</div>
+<a class="flex items-center gap-2 font-label text-on-surface-variant hover:text-primary transition-colors group" href="#">
+                Explore other products 
+                <span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-12 gap-8">
+<!-- JoomShaper -->
+<div class="col-span-12 lg:col-span-7 bg-surface-container rounded-3xl overflow-hidden border border-outline-variant/10 group">
+<div class="p-10 flex flex-col h-full">
+<div class="flex justify-between items-start mb-8">
+<div>
+<h3 class="text-3xl font-headline font-extrabold mb-2 uppercase tracking-tight">JoomShaper</h3>
+<p class="text-on-surface-variant font-body">Since 2010. Home to 300+ trusted Joomla products.</p>
+</div>
+<div class="flex gap-3"><span class="px-3 py-1 rounded-full text-[10px] font-label uppercase tracking-widest bg-[#ADFF2F]/20 border border-[#ADFF2F]/40 text-[#ADFF2F]">140+ Templates</span>
+<span class="px-3 py-1 rounded-full text-[10px] font-label uppercase tracking-widest bg-[#ADFF2F]/20 border border-[#ADFF2F]/40 text-[#ADFF2F]">10M+ Downloads</span></div>
+</div>
+<div class="relative mt-auto pt-10">
+<div class="absolute -bottom-20 -right-20 w-full h-full bg-primary/10 blur-[100px] rounded-full"></div>
+<div class="relative overflow-hidden rounded-2xl border border-outline-variant/20 shadow-2xl">
+<img alt="JoomShaper Interface" class="w-full object-cover translate-y-10 group-hover:translate-y-4 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQmeKraZMWWwGZHk-PNvo7k5OKXWr8df9FgjnS0eN4NeZ8cp0I0OZK3CmFcj9aLoJEfa5hThNF9pgVh0e8wTFEbq0pEAgQ061rCmhJj01rmQC2vmKCFeoDu5CCSiF-F7EY0kMGlj4uWac3Hq0VhkhRX8Sw8qg-Hn413JZeYEjPJpGW816qQnNKPqISp_M9DYzXARV7qQrU08PolRSDxLhSpUGzCDpbLsqAFaF7A-RXJHraE6_S3QGR5AClApP9Rkn4EvZQ4Uh5jf4"/>
+</div>
+<div class="absolute top-1/2 left-1/4 -translate-y-1/2 flex flex-col gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500"><div class="bg-surface-bright/90 backdrop-blur-md px-6 py-3 rounded-xl border border-[#ADFF2F]/20 shadow-xl">
+<span class="text-xs font-label text-[#ADFF2F] font-bold">SP Page Builder</span>
+</div>
+<div class="bg-surface-bright/90 backdrop-blur-md px-6 py-3 rounded-xl border border-[#ADFF2F]/20 shadow-xl ml-8">
+<span class="text-xs font-label text-[#ADFF2F] font-bold">EasyStore</span>
+</div></div>
+</div>
+</div>
+</div>
+<!-- Tutor LMS -->
+<div class="col-span-12 lg:col-span-5 bg-gradient-to-br from-[#2F3AA1]/30 to-transparent bg-surface-container rounded-3xl overflow-hidden border border-outline-variant/10 group">
+<div class="p-10 flex flex-col h-full">
+<div class="mb-8">
+<div class="flex items-center gap-3 mb-4"><span class="bg-[#ADFF2F] text-black px-4 py-2 rounded-lg text-xs font-bold font-label">100K+ Active Installations</span>
+<span class="bg-surface-variant text-on-surface px-4 py-2 rounded-lg text-xs font-bold font-label">4.9 Rating</span></div>
+<p class="text-on-surface-variant font-body mb-6">Leading WordPress LMS trusted by educators worldwide.</p>
+<div class="flex gap-3"><span class="bg-[#ADFF2F] text-black px-4 py-2 rounded-lg text-xs font-bold font-label">100K+ Active Installations</span>
+<span class="bg-surface-variant text-on-surface px-4 py-2 rounded-lg text-xs font-bold font-label">4.9 Rating</span></div>
+</div>
+<div class="relative mt-auto">
+<div class="rounded-2xl border border-outline-variant/20 overflow-hidden shadow-2xl transform group-hover:scale-105 transition-transform duration-700">
+<img alt="Tutor LMS Dashboard" class="w-full h-[300px] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGMW7Sh8HtAxjO80xOdp2cNoco0HMfhckegCPLH_-9iwWhBkyjs6-OL9AAR6F3Zpt9D0ME_1pIz1g80xynUDrcNP-NR5stb75L5NDpjnD8dtSQAtNvyO-oV8My1qq3Jjh3WWXFTYS1XW_ya8YW1vJNuS4wMfI4qBJuyUdMJUboPMo5VoGE8TssLl8evhpQjIR7v26NnOblgPlETTkYWd1EDVDi9Xm2bzeNjqu2RSGgUZ6fVg9EaD5jmU3d1TZmdfBxSkSgF-Eyo-0"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Droip -->
+<div class="col-span-12 lg:col-span-6 bg-surface-container-high rounded-3xl overflow-hidden border border-outline-variant/10 group">
+<div class="p-10">
+<div class="flex justify-between items-start mb-8">
+<div>
+<h3 class="text-2xl font-headline font-bold mb-2">Droip</h3>
+<p class="text-on-surface-variant text-sm">Next-generation revolutionary no-code WordPress website builder.</p>
+</div>
+<span class="product-badge">New Generation</span>
+</div>
+<div class="rounded-xl border border-outline-variant/10 overflow-hidden aspect-video relative">
+<img alt="Droip Builder" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBG85P5qKvZSBC2KQDLc6Iw4Ir8h4dUt-YhxbnrchuWExScPTHMJ5oSk7AlL_kWDxPR61sqkvnKzOp5voW6rpfBIPh6Vr4jx9oMkb0K56RVyn__PxnuQIeYiE3O-P0U-lQAGcA90CurGy3IUxev7pdjNw4TgfWqE0KSgpX6PUgfkiwqC1vwkSMUCVVLZdVB0gI7O5Y6CJHJpN5Ei8SBhA0aC3M5qwttrMI02eqWAh8brUocaA5N8usHsnmwtlfgimwtdebg48VctpU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-high via-transparent to-transparent"></div>
+</div>
+</div>
+</div>
+<!-- Growfund -->
+<div class="col-span-12 lg:col-span-6 bg-surface-container-high rounded-3xl overflow-hidden border border-outline-variant/10 group">
+<div class="p-10">
+<div class="flex justify-between items-start mb-8">
+<div>
+<h3 class="text-2xl font-headline font-bold mb-2">Growfund</h3>
+<p class="text-on-surface-variant text-sm">A complete solution for crowdfunding and donations in WordPress.</p>
+</div>
+<span class="product-badge">FinTech</span>
+</div>
+<div class="rounded-xl border border-outline-variant/10 overflow-hidden aspect-video relative">
+<img alt="Growfund Analytics" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBb4aW3mkqCL-QuxnZ4QFnNPFKRBMQw0P5JYWw5WcZEn92XQUERAP-K4U5LXVip9Z_Dtu2umSQJbSlk6yu5eAPm3LWUnvMq_eEZJm6rvi8sRwZctfMnNNyhCVKjM40CnNk3Xo2iCF9G57XjwvzTwuJxpHttwamQTqj79OQVzN7f1QtKFp2ervzptRmymP8ZdMQ_tN_4355HiwwXNuc1n7P4dINdZOHuqzk7wsqrKaRXmSTheGEfcD7Czt3SLQtt7-cmhEvc7rTo6Qs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-high via-transparent to-transparent"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Industries We Serve (Tabbed Layout) -->
+<section class="py-32 bg-surface-container-low">
+<div class="max-w-[1440px] mx-auto px-12">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<div class="space-y-4">
+<span class="font-label text-primary text-sm uppercase tracking-[0.2em]">Sectors</span>
+<h2 class="text-5xl font-headline font-bold">Deep Industry Expertise</h2>
+</div>
+<div class="flex flex-wrap gap-4">
+<button class="px-6 py-2 rounded-full bg-primary text-on-primary font-label text-sm">Hospital</button>
+<button class="px-6 py-2 rounded-full border border-outline-variant text-on-surface-variant font-label text-sm hover:text-on-surface hover:border-on-surface transition-all">Finance</button>
+<button class="px-6 py-2 rounded-full border border-outline-variant text-on-surface-variant font-label text-sm hover:text-on-surface transition-all">Retail</button>
+<button class="px-6 py-2 rounded-full border border-outline-variant text-on-surface-variant font-label text-sm hover:text-on-surface transition-all">Real Estate</button>
+<button class="px-6 py-2 rounded-full border border-outline-variant text-on-surface-variant font-label text-sm hover:text-on-surface transition-all">Energy</button>
+<button class="px-6 py-2 rounded-full border border-outline-variant text-on-surface-variant font-label text-sm hover:text-on-surface transition-all">Legal</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="space-y-8">
+<h3 class="text-4xl font-headline font-bold">Revolutionizing Healthcare Logistics</h3>
+<p class="text-lg text-on-surface-variant leading-relaxed">
+                            We build HIPAA-compliant systems that handle real-time patient data, automate clinical workflows, and integrate with legacy hospital management software seamlessly.
+                        </p>
+<ul class="space-y-4 font-body text-on-surface">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                HIPAA/GDPR Compliance
+                            </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                Legacy System Modernization
+                            </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                Real-time Analytics Dashboards
+                            </li>
+</ul>
+</div>
+<div class="rounded-3xl overflow-hidden aspect-video relative group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="modern clinical hospital interior with high-tech diagnostic equipment and clean blue architectural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhBV3kqOl6O7nWgNAuriaqgM6xoWB_DcoIiPPsigmuzEuH5G9Y9HYff1FElYiXn3nzj03BRLIij-cSk2b3MP_JtBtVPr99WyguiBX0Rj9CvMxcMnEx5Bdyjr2Y0DyVTu8O3zp3UrpNSi77i4ta9KKpnbNA_Tv4qx5QNGTlxhNObDIBQ3BnXV3Phtcl50SCoZqiiEc1aDcKN4MQ1hcTCxd7bU0bQH0saykJdGvoLw6TmS1gBhd-uPeiC8pqjiwRyDQ6Pk1Lp53Zc-M"/>
+<div class="absolute inset-0 bg-primary/20 mix-blend-overlay"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Elite Talent (Value Props) -->
+<section class="py-32 px-12 max-w-[1440px] mx-auto text-center">
+<div class="mb-24">
+<span class="font-label text-primary text-sm uppercase tracking-[0.2em] mb-4 block">The Codinism Advantage</span>
+<h2 class="text-5xl font-headline font-bold">Why Leading CTOs Choose Us</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="p-8 space-y-6">
+<div class="text-6xl font-headline font-extrabold text-primary drop-shadow-[0_0_15px_rgba(132,173,255,0.4)]">2 Weeks</div>
+<h3 class="text-2xl font-headline font-bold">Elite Talent Rapidly</h3>
+<p class="text-on-surface-variant leading-relaxed">Assemble a world-class engineering team ready to ship code within a 14-day window.</p>
+</div>
+<div class="p-8 space-y-6 bg-surface-container rounded-3xl border border-primary/20">
+<div class="text-6xl font-headline font-extrabold text-primary drop-shadow-[0_0_15px_rgba(132,173,255,0.4)]">Top 4%</div>
+<h3 class="text-2xl font-headline font-bold">Engineers Only</h3>
+<p class="text-on-surface-variant leading-relaxed">Our rigorous vetting process ensures you only work with the most skilled architects in the industry.</p>
+</div>
+<div class="p-8 space-y-6">
+<div class="text-6xl font-headline font-extrabold text-primary drop-shadow-[0_0_15px_rgba(132,173,255,0.4)]">Fast</div>
+<h3 class="text-2xl font-headline font-bold">Global Power</h3>
+<p class="text-on-surface-variant leading-relaxed">Distributed teams across time zones to maintain a 24/7 development cycle for your critical projects.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0e0e0e] w-full border-t border-[#1a1919]">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-20 max-w-[1440px] mx-auto">
+<div class="col-span-1 md:col-span-1">
+<span class="text-xl font-bold text-[#84adff] mb-4 block font-headline">Codinism</span>
+<p class="text-gray-500 font-body text-sm leading-relaxed">Architecting the future of software engineering with elite global talent and precision engineering.</p>
+</div>
+<div>
+<h4 class="text-on-surface font-headline font-bold mb-6">Services</h4>
+<ul class="space-y-4">
+<li><a class="text-gray-500 hover:text-[#84adff] transition-all text-sm" href="#">Blockchain</a></li>
+<li><a class="text-gray-500 hover:text-[#84adff] transition-all text-sm" href="#">Big Data</a></li>
+<li><a class="text-gray-500 hover:text-[#84adff] transition-all text-sm" href="#">Mobile Apps</a></li>
+<li><a class="text-gray-500 hover:text-[#84adff] transition-all text-sm" href="#">Web3 Solutions</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-on-surface font-headline font-bold mb-6">Company</h4>
+<ul class="space-y-4">
+<li><a class="text-gray-500 hover:text-[#84adff] transition-all text-sm" href="#">Why Codinism</a></li>
+<li><a class="text-gray-500 hover:text-[#84adff] transition-all text-sm" href="#">Start Working With Us</a></li>
+<li><a class="text-gray-500 hover:text-[#84adff] transition-all text-sm" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-on-surface font-headline font-bold mb-6">Legal</h4>
+<ul class="space-y-4">
+<li><a class="text-gray-500 hover:text-[#84adff] transition-all text-sm" href="#">Privacy Policy</a></li>
+<li><a class="text-gray-500 hover:text-[#84adff] transition-all text-sm" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-[1440px] mx-auto px-12 py-8 border-t border-[#1a1919] flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-['Inter'] text-sm text-gray-500">© 2024 Codinism Engineering. All rights reserved.</p>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-gray-500 hover:text-primary cursor-pointer transition-colors">public</span>
+<span class="material-symbols-outlined text-gray-500 hover:text-primary cursor-pointer transition-colors">hub</span>
+<span class="material-symbols-outlined text-gray-500 hover:text-primary cursor-pointer transition-colors">terminal</span>
+</div>
+</div>
+</footer>
+</body></html>

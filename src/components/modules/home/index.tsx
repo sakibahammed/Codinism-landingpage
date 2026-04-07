@@ -4,6 +4,7 @@ import Contribution from "@/components/ui/sections/Contribution";
 import GenyoraSection from "@/components/ui/sections/Genoyara";
 import Grow from "@/components/ui/sections/Grow";
 import Industry from "@/components/ui/sections/Industry";
+import Products from "@/components/ui/sections/Products";
 import TechStack from "@/components/ui/sections/TechStack";
 import WeKnow from "@/components/ui/sections/Weknow";
 
@@ -16,6 +17,7 @@ export default function HomePage() {
 
       <Industry />
       <GenyoraSection />
+      <Products />
       <WeKnow />
       <Contribution />
       <Adventure />
