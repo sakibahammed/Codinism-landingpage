@@ -34,19 +34,14 @@ export function IconCloud({ images, iconSlugs }: IconCloudProps) {
           aProps: {
             onClick: (e: any) => e.preventDefault(),
           },
-        })
+        }),
       );
     }
 
     if (images) {
       return images.map((image, index) => (
         <a key={`image-${index}`} href="#" onClick={(e) => e.preventDefault()}>
-          <img
-            height="42"
-            width="42"
-            alt={`Tech icon ${index + 1}`}
-            src={image}
-          />
+          <img height="42" width="42" alt={`Tech icon ${index + 1}`} src={image} />
         </a>
       ));
     }

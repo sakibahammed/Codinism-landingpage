@@ -28,7 +28,7 @@ export default function ClientMessages() {
         Their message
       </SectionTitle>
       <p className="mt-3 text-center text-sm text-white/70 md:text-base">
-        Trust us , we didn't hold them on gun point
+        Trust us , we didn&apos;t hold them on gun point
       </p>
 
       <div className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
@@ -37,17 +37,13 @@ export default function ClientMessages() {
             key={index}
             className="border border-secondary bg-[#111111] p-6 transition-all duration-300 hover:-translate-y-1"
           >
-            <p className="text-base leading-relaxed text-white/90">"{item.message}"</p>
+            <p className="text-base leading-relaxed text-white/90">&quot;{item.message}&quot;</p>
 
             <div className="mt-8 border-t border-secondary pt-5">
-              <p className="text-xs uppercase tracking-[0.12em] text-white/60">
-                Company name
-              </p>
+              <p className="text-xs uppercase tracking-[0.12em] text-white/60">Company name</p>
               <p className="mt-1 text-lg font-semibold text-white">{item.companyName}</p>
 
-              <p className="mt-4 text-xs uppercase tracking-[0.12em] text-white/60">
-                Client name
-              </p>
+              <p className="mt-4 text-xs uppercase tracking-[0.12em] text-white/60">Client name</p>
               <p className="mt-1 text-base text-white">{item.clientName}</p>
             </div>
           </article>

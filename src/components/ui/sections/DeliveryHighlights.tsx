@@ -40,7 +40,9 @@ export default function DeliveryHighlights() {
               key={item.title}
               className={[
                 "flex flex-col gap-4 px-0 py-8 md:px-8 md:py-6",
-                index > 0 ? "border-t border-neutral-200 md:border-t-0 md:border-l md:border-neutral-200" : "",
+                index > 0
+                  ? "border-t border-neutral-200 md:border-t-0 md:border-l md:border-neutral-200"
+                  : "",
               ]
                 .filter(Boolean)
                 .join(" ")}
@@ -62,11 +64,7 @@ export default function DeliveryHighlights() {
                 </div>
               ) : (
                 <>
-                  <item.icon
-                    className="h-9 w-9 text-[#0154ca]"
-                    strokeWidth={1.25}
-                    aria-hidden
-                  />
+                  <item.icon className="h-9 w-9 text-[#0154ca]" strokeWidth={1.25} aria-hidden />
                   <div>
                     <h3 className="text-base font-bold text-neutral-950 md:text-lg">
                       {item.title}

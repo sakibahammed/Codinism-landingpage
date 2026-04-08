@@ -10,13 +10,11 @@ const productsData: Product[] = [
   {
     id: "Programming Hero",
     title: "Programming Hero",
-    description: "Since 2017. Programming Hero is actually one of the biggest EdTech platforms in Bangladesh right now, especially in the programming/web development space..",
+    description:
+      "Since 2017. Programming Hero is actually one of the biggest EdTech platforms in Bangladesh right now, especially in the programming/web development space..",
     image: "/images/products/programming-hero.png",
     imageAlt: "Programming Hero - Let's Code Your Career",
-    badges: [
-      { text: "100K+ Daily Learners", variant: "success" },
-      
-    ],
+    badges: [{ text: "100K+ Daily Learners", variant: "success" }],
     gridSpan: "large",
     caseStudyHref: "https://www.programming-hero.com/",
     features: ["Personalized learning", "Career-focused paths"],
@@ -24,13 +22,11 @@ const productsData: Product[] = [
   {
     id: "Phitron",
     title: "Phitron",
-    description: "Revolutionizing Skill Development and Career Pathways of CS in Bangladesh. Phitron is basically a CSE fundamentals–focused learning platform Unlike typical 'learn React and get job' courses, Phitron goes deep into core CS topics",
+    description:
+      "Revolutionizing Skill Development and Career Pathways of CS in Bangladesh. Phitron is basically a CSE fundamentals–focused learning platform Unlike typical 'learn React and get job' courses, Phitron goes deep into core CS topics",
     image: "/images/products/phitron-hero.png",
     imageAlt: "Phitron — Build your foundation, secure your career",
-    badges: [
-      { text: "12000+ Daily Learners", variant: "success" }
-      
-    ],
+    badges: [{ text: "12000+ Daily Learners", variant: "success" }],
     gridSpan: "medium",
     gradient: "from-[#2F3AA1]/30 to-transparent",
     caseStudyHref: "https://phitron.io/",
@@ -42,13 +38,11 @@ const productsData: Product[] = [
       "Your personal AI-powered skill coach—personalized, adaptive learning paths that match your ambition, skills, and pace.",
     image: "/images/products/edulavo-hero.png",
     imageAlt: "Edulavo — Your personal AI-powered skill coach",
-    badges: [{ text: "AI Powered learning", variant: "success" }
-    ],
+    badges: [{ text: "AI Powered learning", variant: "success" }],
     gridSpan: "small",
     category: "EdTech",
     caseStudyHref: "https://www.edulavo.com/",
   },
-
 ];
 
 const visitCtaClassName =
@@ -69,7 +63,8 @@ function ProductCard({ product }: ProductCardProps) {
   const isMedium = product.gridSpan === "medium";
 
   return (
-    <div
+    <article
+      role="listitem"
       className={`${gridSpanClass} ${
         product.gradient ? `bg-gradient-to-br ${product.gradient}` : ""
       } bg-card rounded-3xl overflow-hidden border border-border/10 group hover:border-primary/30 transition-all duration-300`}
@@ -80,7 +75,9 @@ function ProductCard({ product }: ProductCardProps) {
           <div className="flex-1">
             <h3
               className={`${
-                isLarge ? "text-2xl md:text-3xl font-extrabold uppercase tracking-tight" : "text-xl md:text-2xl font-bold"
+                isLarge
+                  ? "text-2xl md:text-3xl font-extrabold uppercase tracking-tight"
+                  : "text-xl md:text-2xl font-bold"
               } mb-2 text-white`}
             >
               {product.title}
@@ -175,32 +172,34 @@ function ProductCard({ product }: ProductCardProps) {
           )}
         </div>
       </div>
-    </div>
+    </article>
   );
 }
 
 export default function Products() {
   return (
-    <section className="py-16 md:py-32 bg-[#131313] border-y border-border/5">
+    <section
+      id="products"
+      className="py-16 md:py-32 bg-[#131313] border-y border-border/5"
+      aria-labelledby="products-heading"
+    >
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
-        {/* Header */}
-        <div className="mb-12 md:mb-20 flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
+        <header className="mb-12 md:mb-20 flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
           <div className="space-y-4">
             <span className="text-primary text-xs md:text-sm uppercase tracking-[0.2em] font-semibold">
               Ecosystem
             </span>
             <SectionTitle
+              id="products-heading"
               size="2xl"
               className="text-3xl md:text-4xl lg:text-5xl font-bold text-white"
             >
-             Our Industry-Leading Products
+              Our Industry-Leading Products
             </SectionTitle>
           </div>
+        </header>
 
-        </div>
-
-        {/* Products Grid */}
-        <div className="grid grid-cols-12 gap-6 md:gap-8">
+        <div className="grid grid-cols-12 gap-6 md:gap-8" role="list">
           {productsData.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}

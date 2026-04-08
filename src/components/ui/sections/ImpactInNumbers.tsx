@@ -19,19 +19,23 @@ export default function ImpactInNumbers() {
           IMPACT IN NUMBERS
         </h2>
 
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6" role="list">
           {stats.map((stat) => (
-            <div
+            <article
               key={stat.label}
+              role="listitem"
               className="rounded-2xl bg-[#051C42] px-6 py-10 text-center shadow-lg shadow-[#051C42]/20 md:py-12"
             >
-              <p className="text-4xl font-bold text-[#94B8FF] md:text-5xl lg:text-6xl">
+              <p
+                className="text-4xl font-bold text-[#94B8FF] md:text-5xl lg:text-6xl"
+                aria-label={`${stat.value} ${stat.label.toLowerCase()}`}
+              >
                 {stat.value}
               </p>
               <p className="mt-4 text-xs font-medium uppercase tracking-[0.2em] text-[#94B8FF] md:text-sm">
                 {stat.label}
               </p>
-            </div>
+            </article>
           ))}
         </div>
       </div>

@@ -11,17 +11,27 @@ const stats = [
 
 export default function GlobalFootprint() {
   return (
-    <section className="relative overflow-hidden border-l-4 border-[#0154ca] bg-[#131313] py-16 md:py-24">
+    <section
+      id="global-footprint"
+      className="relative overflow-hidden border-l-4 border-[#0154ca] bg-[#131313] py-16 md:py-24"
+      aria-labelledby="global-footprint-heading"
+    >
       <div className="relative z-10 mx-auto max-w-[1400px] px-6 md:px-12">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <div>
-            <h2 className="mb-10 text-4xl font-extrabold uppercase tracking-tighter text-white md:text-5xl">
+            <h2
+              id="global-footprint-heading"
+              className="mb-10 text-4xl font-extrabold uppercase tracking-tighter text-white md:text-5xl"
+            >
               Global Footprint
             </h2>
-            <div className="space-y-12 md:space-y-16">
+            <div className="space-y-12 md:space-y-16" role="list">
               {stats.map((stat) => (
-                <div key={stat.label}>
-                  <p className="text-6xl font-black text-[#84adff] drop-shadow-[0_0_15px_rgba(132,173,255,0.3)] md:text-7xl">
+                <div key={stat.label} role="listitem">
+                  <p
+                    className="text-6xl font-black text-[#84adff] drop-shadow-[0_0_15px_rgba(132,173,255,0.3)] md:text-7xl"
+                    aria-label={`${stat.value} ${stat.label.toLowerCase()}`}
+                  >
                     {stat.value}
                   </p>
                   <p className="mt-2 font-mono text-sm tracking-[0.2em] text-neutral-400">
