@@ -3,7 +3,7 @@
 import { SectionTitle } from "@/components/custom";
 import { Industry } from "@/types";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const industriesData: Industry[] = [
   {
@@ -17,7 +17,7 @@ const industriesData: Industry[] = [
       "Legacy System Modernization",
       "Real-time Analytics Dashboards",
     ],
-    image: "/images/industries/hospital.jpg",
+    image: "/images/industries/hospital-team.jpg",
     imageAlt: "Healthcare Technology Solutions",
   },
   {
@@ -31,7 +31,7 @@ const industriesData: Industry[] = [
       "Fraud Detection Systems",
       "Real-time Payment Processing",
     ],
-    image: "/images/industries/finance.jpg",
+    image: "/images/industries/finance-investment.jpg",
     imageAlt: "Financial Technology Solutions",
   },
   {
@@ -45,7 +45,7 @@ const industriesData: Industry[] = [
       "Inventory Optimization",
       "Customer Analytics",
     ],
-    image: "/images/industries/retail.jpg",
+    image: "/images/industries/retail-cafe.jpg",
     imageAlt: "Retail Technology Solutions",
   },
   {
@@ -59,7 +59,7 @@ const industriesData: Industry[] = [
       "Automated Lease Management",
       "Market Analytics",
     ],
-    image: "/images/industries/real-estate.jpg",
+    image: "/images/industries/real-estate-modern.jpg",
     imageAlt: "Real Estate Technology Solutions",
   },
   {
@@ -73,7 +73,7 @@ const industriesData: Industry[] = [
       "IoT Monitoring Systems",
       "Energy Analytics",
     ],
-    image: "/images/industries/energy.jpg",
+    image: "/images/industries/energy-solar.jpg",
     imageAlt: "Energy Technology Solutions",
   },
   {
@@ -87,7 +87,7 @@ const industriesData: Industry[] = [
       "Case Management",
       "AI-Powered Research",
     ],
-    image: "/images/industries/legal.jpg",
+    image: "/images/industries/legal-justice.jpg",
     imageAlt: "Legal Technology Solutions",
   },
 ];
@@ -98,8 +98,7 @@ export default function Industries() {
 
   const handleIndustryChange = (industry: Industry) => {
     if (industry.id === activeIndustry.id) return;
-    
-    console.log("Switching to industry:", industry.name);
+
     setIsTransitioning(true);
     
     setTimeout(() => {
@@ -129,10 +128,10 @@ export default function Industries() {
               <button
                 key={industry.id}
                 onClick={() => handleIndustryChange(industry)}
-                className={`px-6 md:px-8 py-3 md:py-3.5 rounded-full text-sm md:text-base font-medium transition-all duration-300 ${
+                className={`rounded-full px-6 py-3 text-sm font-medium transition-all duration-300 md:px-8 md:py-3.5 md:text-base ${
                   activeIndustry.id === industry.id
-                    ? "bg-primary text-white shadow-lg shadow-primary/30"
-                    : "bg-transparent border border-gray-700 text-gray-400 hover:border-primary/50 hover:text-white"
+                    ? "bg-primary text-white shadow-[0_0_24px_rgba(1,84,202,0.45)] ring-1 ring-primary/40"
+                    : "border border-gray-700 bg-transparent text-gray-400 hover:border-primary/50 hover:text-white"
                 }`}
               >
                 {industry.name}
@@ -143,9 +142,9 @@ export default function Industries() {
 
         {/* Content Area with Carousel Effect */}
         <div className="relative min-h-[600px] md:min-h-[500px]">
-          <div 
-            className={`grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center transition-all duration-500 ${
-              isTransitioning ? 'opacity-0 translate-x-10' : 'opacity-100 translate-x-0'
+          <div
+            className={`grid grid-cols-1 items-center gap-8 transition-all duration-500 md:gap-12 lg:grid-cols-2 ${
+              isTransitioning ? "translate-x-10 opacity-0" : "translate-x-0 opacity-100"
             }`}
           >
             {/* Left Content */}

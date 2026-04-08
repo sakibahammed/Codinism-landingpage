@@ -106,12 +106,11 @@ export default function WeKnow() {
       </div>
 
       {/* ---------------------------- BUTTON ---------------------------- */}
-      <div className="flex items-center justify-center mt-6">
+      <div className="mt-6 mb-12 flex items-center justify-center md:mb-16">
         <Button
           className="
-            flex items-center gap-2 bg-primary text-white
-            px-6 py-3 rounded-full shadow-lg
-            h-12 mt-6
+            flex h-12 items-center gap-2 rounded-full bg-primary px-6 py-3
+            text-white shadow-lg
           "
           onClick={() => setIsOpen(true)}
         >

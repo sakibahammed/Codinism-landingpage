@@ -3,6 +3,9 @@ import Banner2 from "@/components/ui/sections/Banner2";
 import CaseStudy from "@/components/ui/sections/CaseStudy";
 import Contribution from "@/components/ui/sections/Contribution";
 import Grow from "@/components/ui/sections/Grow";
+import DeliveryHighlights from "@/components/ui/sections/DeliveryHighlights";
+import GlobalFootprint from "@/components/ui/sections/GlobalFootprint";
+import ImpactInNumbers from "@/components/ui/sections/ImpactInNumbers";
 import Industries from "@/components/ui/sections/Industries";
 import Products from "@/components/ui/sections/Products";
 import TechStack from "@/components/ui/sections/TechStack";
@@ -15,11 +18,14 @@ export default function HomePage() {
         <Banner2 className="h-screen" />
       </div>
 
+      <ImpactInNumbers />
       <Products />
-      <Industries />
       <CaseStudy />
       <WeKnow />
+      <Industries />
+      <GlobalFootprint />
       <Contribution />
+      <DeliveryHighlights />
       <Adventure />
       <Grow />
 

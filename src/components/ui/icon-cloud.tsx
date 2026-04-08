@@ -9,7 +9,13 @@ export interface IconCloudProps {
 }
 
 export function IconCloud({ images, iconSlugs }: IconCloudProps) {
+  const [mounted, setMounted] = useState(false);
   const [data, setData] = useState<any>(null);
+
+  // Cloud assigns random canvas ids per render; skip SSR so server/client markup match.
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     if (iconSlugs) {
@@ -47,6 +53,16 @@ export function IconCloud({ images, iconSlugs }: IconCloudProps) {
 
     return [];
   }, [data, images, iconSlugs]);
+
+  if (!mounted) {
+    return (
+      <div
+        className="flex h-full min-h-[400px] w-full items-center justify-center"
+        aria-busy="true"
+        aria-label="Loading technology icons"
+      />
+    );
+  }
 
   return (
     <Cloud

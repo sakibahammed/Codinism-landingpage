@@ -22,78 +22,63 @@ interface CaseStudy {
 
 const caseStudiesData: CaseStudy[] = [
   {
-    id: "edtech-scaling",
-    title: "Scaling EdTech Platform to 100K+ Daily Users",
-    client: "Programming Hero",
-    problem: "Platform struggled with performance issues during peak hours, affecting user experience and course delivery for thousands of learners.",
-    solution: "Implemented microservices architecture, optimized database queries, and deployed CDN for static assets. Added real-time monitoring and auto-scaling infrastructure.",
+    id: "doorstep-service-company",
+    title: "Stabilizing a Legacy Codebase for a Doorstep Service Platform",
+    client: "Doorstep Service Company",
+    problem:
+      "The previous development team left critical bugs, unstable releases, and inconsistent architecture, causing frequent production issues like : Timezone issues , Broken and Fraudulent Report and broken IOS and Android app.",
+    solution:
+      "We audited the entire codebase, fixed high-impact defects, standardized architecture patterns, added test coverage for critical flows, and introduced a safer release pipeline with monitoring.",
     results: [
-      "99.9% uptime achieved",
-      "70% reduction in page load time",
-      "Scaled to 100K+ concurrent users",
-      "50% reduction in server costs"
+      "98% reduction in critical production bugs",
+      "2x faster release cycles",
+      "Improved platform stability during peak traffic",
+      "Higher developer velocity with cleaner architecture",
     ],
-    tags: ["Performance", "Scalability", "Cloud Infrastructure"],
-    image: "/images/case-studies/edtech-scaling.jpg",
-    imageAlt: "EdTech Platform Scaling Case Study",
+    tags: ["Performance", "Scalability", "Code Quality", "Bug Fixing"],
+    image: "/images/case-studies/doorstep-service.png",
+    imageAlt: "Doorstep service platform engineering turnaround",
   },
   {
-    id: "fintech-security",
-    title: "Building Secure Payment Gateway",
-    client: "FinTech Startup",
-    problem: "Client needed a PCI-DSS compliant payment processing system with real-time fraud detection to handle sensitive financial transactions.",
-    solution: "Developed end-to-end encrypted payment gateway with AI-powered fraud detection, multi-factor authentication, and comprehensive audit logging.",
+    id: "iron-depot",
+    title: "Fake Data Scraping System deleted , Replaced with Expected Business logic.",
+    client: "Iron Depot",
+    problem: "Client needed a real time data scraping system to scrape data from Facebook marketplace and other sources to get the data in a real time dashboard. But turned out to be that their previous ones use fake data scraping - Manually inputing data in system which was not working as expected.",
+    solution: "Deleted the fake data scraping system and replaced it with Expected Business logic. with proper data validation and error handling.",
     results: [
-      "PCI-DSS Level 1 certified",
-      "99.99% transaction success rate",
-      "Fraud detection accuracy 98%",
-      "Processing 10K+ transactions/day"
-    ],
-    tags: ["Security", "Fintech", "Compliance"],
-    image: "/images/case-studies/fintech-security.jpg",
-    imageAlt: "Fintech Security Case Study",
-  },
-  {
-    id: "healthcare-integration",
-    title: "Legacy Healthcare System Modernization",
-    client: "Regional Hospital Network",
-    problem: "Hospital relied on outdated systems that couldn't communicate with each other, causing delays in patient care and administrative inefficiencies.",
-    solution: "Built HIPAA-compliant integration layer connecting legacy systems with modern cloud infrastructure. Implemented real-time data synchronization and unified dashboard.",
-    results: [
-      "40% faster patient processing",
+      "150% faster real time data scraping",
       "Eliminated manual data entry",
-      "Real-time patient data access",
-      "HIPAA compliant architecture"
+      "Real-time data access",
+      "Business logic implemented"
     ],
-    tags: ["Healthcare", "Integration", "Legacy Modernization"],
-    image: "/images/case-studies/healthcare-integration.jpg",
-    imageAlt: "Healthcare Integration Case Study",
+    tags: ["Data Scraping", "Integration", "Business Logic"],
+    image: "/images/case-studies/healthcare-hero.png",
+    imageAlt: "Iron Depot Data Scraping System",
   },
   {
-    id: "retail-omnichannel",
-    title: "Omnichannel Retail Experience",
-    client: "National Retail Chain",
-    problem: "Disconnected online and offline shopping experiences led to inventory issues, poor customer satisfaction, and lost sales opportunities.",
-    solution: "Created unified commerce platform integrating POS, e-commerce, mobile app, and inventory management with real-time synchronization across all channels.",
+    id: "Cozii Prop",
+    title: "cozii property management system integration.",
+    client: "Cozii Property Management",
+    problem: "From the verdict of being bankrupt from AWS bill payment , to successfully migrated to Digital Ocean and now successful in getting the property management system working with the new infrastructure.",
+    solution: "Migrated the property management system to Digital Ocean and successfully integrated it with the new infrastructure and business logic.",
     results: [
-      "35% increase in online sales",
-      "90% inventory accuracy",
-      "Unified customer profiles",
+      "62% increase in online sales",
+      "Top Tier Property Management System",
+      "Unified customer , owner and property profiles",
       "Seamless cross-channel returns"
     ],
-    tags: ["Retail", "Omnichannel", "E-commerce"],
-    image: "/images/case-studies/retail-omnichannel.jpg",
-    imageAlt: "Retail Omnichannel Case Study",
+    tags: ["Property Management", "Digital Ocean", "AWS"],
+    image: "/images/case-studies/retail-dashboard.png",
+    imageAlt: "Cozii Property Management System",
   },
 ];
 
 interface CaseStudyCardProps {
   caseStudy: CaseStudy;
   index: number;
-  totalCards: number;
 }
 
-function CaseStudyCard({ caseStudy, index, totalCards }: CaseStudyCardProps) {
+function CaseStudyCard({ caseStudy, index }: CaseStudyCardProps) {
   const isEven = index % 2 === 0;
   const cardRef = useRef<HTMLDivElement>(null);
   const [scale, setScale] = useState(1);
@@ -131,34 +116,31 @@ function CaseStudyCard({ caseStudy, index, totalCards }: CaseStudyCardProps) {
         zIndex: index + 1,
       }}
     >
-      <div 
-        className="group relative bg-card rounded-3xl overflow-hidden border border-border/10 hover:border-primary/30 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/10"
+      <div
+        className="relative overflow-hidden rounded-3xl border border-border/20 bg-card"
         style={{
           transform: `scale(${scale})`,
-          transformOrigin: 'top center',
-          transition: 'transform 0.3s ease-out',
+          transformOrigin: "top center",
+          transition: "transform 0.3s ease-out",
         }}
       >
         {/* Background gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-100" />
       
-      <div className={`relative grid grid-cols-1 ${isEven ? 'lg:grid-cols-2' : 'lg:grid-cols-2'} gap-0`}>
+      <div className={`relative grid grid-cols-1 ${isEven ? "lg:grid-cols-2" : "lg:grid-cols-2"} gap-0`}>
         {/* Image Section */}
-        <div className={`relative h-[300px] lg:h-full ${!isEven ? 'lg:order-2' : ''}`}>
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent" />
+        <div className={`relative h-[300px] lg:h-full ${!isEven ? "lg:order-2" : ""}`}>
           <Image
             src={caseStudy.image}
             alt={caseStudy.imageAlt}
             fill
             sizes="(max-width: 1024px) 100vw, 50vw"
-            className="object-cover"
+            className="object-contain bg-[#0f1115] p-2"
           />
-          {/* Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-card/90 via-card/50 to-transparent lg:bg-gradient-to-r lg:from-card lg:via-card/80 lg:to-transparent" />
         </div>
 
         {/* Content Section */}
-        <div className={`relative p-8 md:p-10 lg:p-12 flex flex-col justify-between ${!isEven ? 'lg:order-1' : ''}`}>
+        <div className={`relative flex flex-col justify-between p-8 md:p-10 lg:p-12 ${!isEven ? "lg:order-1" : ""}`}>
           {/* Header */}
           <div className="space-y-4 mb-6">
             {/* Tags */}
@@ -166,7 +148,7 @@ function CaseStudyCard({ caseStudy, index, totalCards }: CaseStudyCardProps) {
               {caseStudy.tags.map((tag, idx) => (
                 <Badge
                   key={idx}
-                  className="bg-primary/20 border-primary/40 text-primary text-[10px] uppercase tracking-wider font-bold px-3 py-1"
+                  className="bg-primary/20 border-primary/40 text-white text-[10px] uppercase tracking-wider font-bold px-3 py-1"
                 >
                   {tag}
                 </Badge>
@@ -174,12 +156,12 @@ function CaseStudyCard({ caseStudy, index, totalCards }: CaseStudyCardProps) {
             </div>
 
             {/* Client */}
-            <div className="text-xs uppercase tracking-widest text-gray-500 font-semibold">
+            <div className="text-xs font-semibold uppercase tracking-widest text-gray-300">
               {caseStudy.client}
             </div>
 
             {/* Title */}
-            <h3 className="text-2xl md:text-3xl font-bold text-white leading-tight group-hover:text-primary transition-colors duration-300">
+            <h3 className="text-2xl font-bold leading-tight text-white md:text-3xl">
               {caseStudy.title}
             </h3>
           </div>
@@ -190,7 +172,7 @@ function CaseStudyCard({ caseStudy, index, totalCards }: CaseStudyCardProps) {
               <h4 className="text-sm uppercase tracking-wider text-primary font-bold mb-2">
                 The Challenge
               </h4>
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <p className="text-sm leading-relaxed text-gray-200">
                 {caseStudy.problem}
               </p>
             </div>
@@ -199,7 +181,7 @@ function CaseStudyCard({ caseStudy, index, totalCards }: CaseStudyCardProps) {
               <h4 className="text-sm uppercase tracking-wider text-primary font-bold mb-2">
                 Our Solution
               </h4>
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <p className="text-sm leading-relaxed text-gray-200">
                 {caseStudy.solution}
               </p>
             </div>
@@ -230,10 +212,10 @@ function CaseStudyCard({ caseStudy, index, totalCards }: CaseStudyCardProps) {
             <div className="mt-8">
               <Link
                 href={caseStudy.link}
-                className="inline-flex items-center gap-2 text-primary font-semibold text-sm hover:gap-3 transition-all duration-300 group/link"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-primary"
               >
                 View Full Case Study
-                <ArrowUpRight className="w-4 h-4 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform duration-300" />
+                <ArrowUpRight className="h-4 w-4" />
               </Link>
             </div>
           )}
@@ -259,7 +241,7 @@ export default function CaseStudy() {
           >
           Impact of our Journey
           </SectionTitle>
-          <p className="text-gray-400 text-base md:text-lg leading-relaxed">
+          <p className="text-base leading-relaxed text-gray-200 md:text-lg">
             Real problems. Real solutions. Real business impact. See how we've helped companies across industries solve their most critical challenges.
           </p>
         </div>
@@ -271,7 +253,6 @@ export default function CaseStudy() {
               key={caseStudy.id} 
               caseStudy={caseStudy} 
               index={index}
-              totalCards={caseStudiesData.length}
             />
           ))}
         </div>
