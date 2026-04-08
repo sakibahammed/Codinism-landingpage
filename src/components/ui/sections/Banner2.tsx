@@ -19,10 +19,12 @@ type BannerProps = {
 const Banner2 = ({ title_one, title_two, description, hideCTABtns, className }: BannerProps) => {
   const { isOpen, setIsOpen } = useContactForm();
   return (
-    <div className={`relative flex items-center justify-center overflow-hidden ${className}`}>
+    <section
+      className={`relative flex items-center justify-center overflow-hidden ${className}`}
+      aria-label="Hero section"
+    >
       <AngleLight />
       <BinaryBackground w={0.48} h={0.45} />
-      {/* Centered content */}
       <div
         className="
           absolute
@@ -36,7 +38,6 @@ const Banner2 = ({ title_one, title_two, description, hideCTABtns, className }: 
           top-0
         "
       >
-        {/* Main Heading */}
         <SectionTitle
           size="2xl"
           variant="centered"
@@ -52,12 +53,12 @@ const Banner2 = ({ title_one, title_two, description, hideCTABtns, className }: 
             tracking-tight
             text-white
           "
+          as="h1"
         >
-          <span className="block">{title_one ?? "Helping companies scale"}</span>
-          <span className="block">{title_two ?? "engineering without increasing headcount."}</span>
+          <span className="block">{title_one ?? "Automate Operations - Scale Faster"}</span>
+          <span className="block">{title_two ?? ""}</span>
         </SectionTitle>
 
-        {/* Subtitle */}
         <p
           className="
             text-base
@@ -71,7 +72,7 @@ const Banner2 = ({ title_one, title_two, description, hideCTABtns, className }: 
           "
         >
           {description ??
-            "We help startups and growing teams extend their engineering capacity. Ship faster without long hiring cycles or added overhead."}
+            "We build AI agents and automation systems that replace manual workflows, helping you scale and ship faster. Your partner in building Custom software, SaaS platforms, and AI Solutions"}
         </p>
 
         {/* Buttons */}
@@ -108,7 +109,7 @@ const Banner2 = ({ title_one, title_two, description, hideCTABtns, className }: 
             "
               onClick={() => setIsOpen(true)}
             >
-              Let’s Talk <ArrowUpRight size={18} />
+              See What You Can Automate <ArrowUpRight size={18} />
             </Button>
 
             {/* <Button
@@ -134,7 +135,7 @@ const Banner2 = ({ title_one, title_two, description, hideCTABtns, className }: 
         )}
       </div>
       <SendMessageForm open={isOpen} onOpenChange={setIsOpen} />
-    </div>
+    </section>
   );
 };
 

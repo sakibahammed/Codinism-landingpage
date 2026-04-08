@@ -170,3 +170,19 @@ input:-webkit-autofill:focus {
   background-color: transparent !important;
   transition: background-color 9999s ease-in-out 0s;
 }
+
+/* Fade in animation for carousel content */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out forwards;
+}

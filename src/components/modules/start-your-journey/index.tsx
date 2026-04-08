@@ -15,7 +15,7 @@ export default function StartYourJourney() {
       <Banner2
         title_one="Hire Your Dream"
         title_two="Developer Now"
-        description="Get World-class Of The Top of Remote Software Developers To Accelerate Your Development Mission"
+        description="Your partner in building Custom software, SaaS platforms, and AI Solutions"
         hideCTABtns={true}
         className="h-[70vh]"
       />

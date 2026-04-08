@@ -1,0 +1,27 @@
+{
+  "name": "Codinism - Scale Engineering Without Increasing Headcount",
+  "short_name": "Codinism",
+  "description": "Codinism helps startups and growing teams extend their engineering capacity. Ship faster without long hiring cycles or added overhead.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000102",
+  "theme_color": "#000102",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "productivity", "education"],
+  "lang": "en-US",
+  "dir": "ltr"
+}

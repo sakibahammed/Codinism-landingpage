@@ -1,68 +1,55 @@
-import { SectionTitle } from "@/components/custom";
-import Image from "next/image";
+"use client";
 
-// List of technology stack logos
+import { SectionTitle } from "@/components/custom";
+import { IconCloud } from "@/components/ui/icon-cloud";
+
+// List of technology stack slugs for Simple Icons
+const iconSlugs = [
+  "javascript",
+  "typescript",
+  "react",
+  "vuedotjs",
+  "nodedotjs",
+  "python",
+  "php",
+  "django",
+  "graphql",
+  "android",
+  "flutter",
+  "swift",
+  "postgresql",
+  "mongodb",
+  "docker",
+  "amazonaws",
+];
 
 export default function TechStack() {
   return (
-    <>
-      {/* ---------------------------- SECTION TITLE ---------------------------- */}
-      <div className="w-[450px] mx-auto text-center mt-16 max-w-full">
-        <SectionTitle className="text-center text-white" size="2xl">
-          What Tech Stack We Work With
-        </SectionTitle>
-      </div>
-
-      {/* ---------------------------- STACK LOGOS ---------------------------- */}
-      {/* Responsive block:
-          - `flex-wrap` ensures logos wrap naturally on smaller screens
-          - fixed width center-aligned container for consistency
-      */}
-      <div className="text-white grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
-        {techStack?.map((tech, index) => (
-          <div
-            key={index}
-            className={`bg-primary/10 p-6 text-center items-center justify-center flex  gap-3 cursor-pointer hover:bg-primary/20 transition`}
+    <section
+      id="tech-stack"
+      className="py-16 md:py-24 bg-[#0a0a0a]"
+      aria-labelledby="tech-stack-heading"
+    >
+      <div className="max-w-[1400px] mx-auto px-6 md:px-12">
+        <header className="w-[450px] mx-auto text-center mb-12 max-w-full">
+          <SectionTitle
+            id="tech-stack-heading"
+            className="text-center text-white"
+            size="2xl"
+            as="h2"
           >
-            <Image
-              src={tech.icon}
-              width={48}
-              height={48}
-              alt={`${tech.title} icon`}
-              className="object-contain"
-              priority
-            />
-            <p className="text-md">{tech?.title}</p>
-          </div>
-        ))}
+            Tech Stack We Know Better With AI
+          </SectionTitle>
+        </header>
+
+        <div
+          className="relative flex h-[500px] w-full max-w-[32rem] items-center justify-center mx-auto"
+          role="img"
+          aria-label="Interactive cloud of technology logos including JavaScript, TypeScript, React, Node.js, Python, and more"
+        >
+          <IconCloud iconSlugs={iconSlugs} />
+        </div>
       </div>
-    </>
+    </section>
   );
 }
-
-const techStack = [
-  { title: "Javascript", icon: "/icon/stacks/javascript.png" },
-  { title: "TypeScript", icon: "/icon/stacks/typescript.png" },
-  { title: "React", icon: "/icon/stacks/react.png" },
-  { title: "Vue.JS", icon: "/icon/stacks/vue.png" },
-
-  // Backend
-  { title: "Node JS", icon: "/icon/stacks/node.png" },
-  { title: "Python", icon: "/icon/stacks/python.png" },
-  { title: "PHP", icon: "/icon/stacks/php.png" },
-  { title: "Django", icon: "/icon/stacks/dj.png" },
-  { title: "GraphQL", icon: "/icon/stacks/graphql.png" },
-
-  // Mobile
-  { title: "Android", icon: "/icon/stacks/android.png" },
-  { title: "Flutter", icon: "/icon/stacks/flutter.png" },
-  { title: "Swift", icon: "/icon/stacks/swift.png" },
-
-  // Database
-  { title: "PostgreSQL", icon: "/icon/stacks/postgres.png" },
-  { title: "MongoDB", icon: "/icon/stacks/mongodb.png" },
-
-  // DevOps
-  { title: "DevOps", icon: "/icon/stacks/devops.png" },
-  { title: "AWS", icon: "/icon/aws.png" },
-];

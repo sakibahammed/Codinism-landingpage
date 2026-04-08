@@ -66,8 +66,8 @@ export default function Banner({
             text-white
           "
         >
-          {title_one ?? " Helping companies scale  "}
-          <br /> {title_two ?? "engineering without increasing headcount."}
+          {title_one ?? "Automate Operations - Scale Faster"}
+          <br /> {title_two ?? ""}
         </SectionTitle>
 
         {/* Subtitle / Description */}
@@ -84,7 +84,7 @@ export default function Banner({
           "
         >
           {description ??
-            "We dont just write code — we become your product partner, shaping your vision into a real, scalable solution. Every project we take on is crafted with care, precision, and pride, so your success is our shared mission."}
+            "We build AI agents and automation systems that replace manual workflows, helping you scale and ship faster. Your partner in building Custom software, SaaS platforms, and AI Solutions"}
         </p>
 
         {/* CTA Buttons */}
@@ -121,7 +121,7 @@ export default function Banner({
               duration-300
             "
             >
-              Let’s Talk <ArrowUpRight size={18} />
+              See What You Can Automate <ArrowUpRight size={18} />
             </Button>
 
             {/* Secondary Button */}
