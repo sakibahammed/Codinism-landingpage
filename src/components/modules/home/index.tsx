@@ -2,7 +2,7 @@ import Adventure from "@/components/ui/sections/Adventure";
 import Banner2 from "@/components/ui/sections/Banner2";
 import Contribution from "@/components/ui/sections/Contribution";
 import Grow from "@/components/ui/sections/Grow";
-import Industry from "@/components/ui/sections/Industry";
+import Industries from "@/components/ui/sections/Industries";
 import Products from "@/components/ui/sections/Products";
 import TechStack from "@/components/ui/sections/TechStack";
 import WeKnow from "@/components/ui/sections/Weknow";
@@ -15,7 +15,7 @@ export default function HomePage() {
       </div>
 
       <Products />
-      <Industry />
+      <Industries />
       <WeKnow />
       <Contribution />
       <Adventure />

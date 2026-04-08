@@ -22,3 +22,13 @@ export interface Product {
   gradient?: string;
   category?: string;
 }
+
+export interface Industry {
+  id: string;
+  name: string;
+  title: string;
+  description: string;
+  features: string[];
+  image: string;
+  imageAlt: string;
+}

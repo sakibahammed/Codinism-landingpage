@@ -24,7 +24,7 @@ const productsData: Product[] = [
   {
     id: "Phitron",
     title: "Phitron",
-    description: "Revolutionizing Skill Development and Career Pathways of CS in Bangladesh. Phitron is basically a CSE fundamentals–focused learning platform Unlike typical “learn React and get job” courses, Phitron goes deep into core CS topics",
+    description: "Revolutionizing Skill Development and Career Pathways of CS in Bangladesh. Phitron is basically a CSE fundamentals–focused learning platform Unlike typical 'learn React and get job' courses, Phitron goes deep into core CS topics",
     image: "/images/products/phitron-hero.png",
     imageAlt: "Phitron — Build your foundation, secure your career",
     badges: [
