@@ -17,6 +17,7 @@ export interface Product {
   imageAlt: string;
   badges: ProductBadge[];
   gridSpan: "large" | "medium" | "small";
+  caseStudyHref: string;
   features?: string[];
   gradient?: string;
   category?: string;

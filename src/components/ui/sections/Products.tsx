@@ -3,62 +3,56 @@
 import { SectionTitle } from "@/components/custom";
 import { Badge } from "@/components/ui/badge";
 import { Product } from "@/types";
-import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 const productsData: Product[] = [
   {
-    id: "joomshaper",
-    title: "JoomShaper",
-    description: "Since 2010. Home to 300+ trusted Joomla products.",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuAQmeKraZMWWwGZHk-PNvo7k5OKXWr8df9FgjnS0eN4NeZ8cp0I0OZK3CmFcj9aLoJEfa5hThNF9pgVh0e8wTFEbq0pEAgQ061rCmhJj01rmQC2vmKCFeoDu5CCSiF-F7EY0kMGlj4uWac3Hq0VhkhRX8Sw8qg-Hn413JZeYEjPJpGW816qQnNKPqISp_M9DYzXARV7qQrU08PolRSDxLhSpUGzCDpbLsqAFaF7A-RXJHraE6_S3QGR5AClApP9Rkn4EvZQ4Uh5jf4",
-    imageAlt: "JoomShaper Interface",
+    id: "Programming Hero",
+    title: "Programming Hero",
+    description: "Since 2017. Programming Hero is actually one of the biggest EdTech platforms in Bangladesh right now, especially in the programming/web development space..",
+    image: "/images/products/programming-hero.png",
+    imageAlt: "Programming Hero - Let's Code Your Career",
     badges: [
-      { text: "140+ Templates", variant: "success" },
-      { text: "10M+ Downloads", variant: "success" },
+      { text: "100K+ Daily Learners", variant: "success" },
+      
     ],
     gridSpan: "large",
-    features: ["SP Page Builder", "EasyStore"],
+    caseStudyHref: "https://www.programming-hero.com/",
+    features: ["Personalized learning", "Career-focused paths"],
   },
   {
-    id: "tutor-lms",
-    title: "Tutor LMS",
-    description: "Leading WordPress LMS trusted by educators worldwide.",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDGMW7Sh8HtAxjO80xOdp2cNoco0HMfhckegCPLH_-9iwWhBkyjs6-OL9AAR6F3Zpt9D0ME_1pIz1g80xynUDrcNP-NR5stb75L5NDpjnD8dtSQAtNvyO-oV8My1qq3Jjh3WWXFTYS1XW_ya8YW1vJNuS4wMfI4qBJuyUdMJUboPMo5VoGE8TssLl8evhpQjIR7v26NnOblgPlETTkYWd1EDVDi9Xm2bzeNjqu2RSGgUZ6fVg9EaD5jmU3d1TZmdfBxSkSgF-Eyo-0",
-    imageAlt: "Tutor LMS Dashboard",
+    id: "Phitron",
+    title: "Phitron",
+    description: "Revolutionizing Skill Development and Career Pathways of CS in Bangladesh. Phitron is basically a CSE fundamentals–focused learning platform Unlike typical “learn React and get job” courses, Phitron goes deep into core CS topics",
+    image: "/images/products/phitron-hero.png",
+    imageAlt: "Phitron — Build your foundation, secure your career",
     badges: [
-      { text: "100K+ Active Installations", variant: "success" },
-      { text: "4.9 Rating", variant: "secondary" },
+      { text: "12000+ Daily Learners", variant: "success" }
+      
     ],
     gridSpan: "medium",
     gradient: "from-[#2F3AA1]/30 to-transparent",
+    caseStudyHref: "https://phitron.io/",
   },
   {
-    id: "droip",
-    title: "Droip",
-    description: "Next-generation revolutionary no-code WordPress website builder.",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuBG85P5qKvZSBC2KQDLc6Iw4Ir8h4dUt-YhxbnrchuWExScPTHMJ5oSk7AlL_kWDxPR61sqkvnKzOp5voW6rpfBIPh6Vr4jx9oMkb0K56RVyn__PxnuQIeYiE3O-P0U-lQAGcA90CurGy3IUxev7pdjNw4TgfWqE0KSgpX6PUgfkiwqC1vwkSMUCVVLZdVB0gI7O5Y6CJHJpN5Ei8SBhA0aC3M5qwttrMI02eqWAh8brUocaA5N8usHsnmwtlfgimwtdebg48VctpU",
-    imageAlt: "Droip Builder",
-    badges: [{ text: "New Generation", variant: "default" }],
+    id: "EduLavo",
+    title: "EduLavo",
+    description:
+      "Your personal AI-powered skill coach—personalized, adaptive learning paths that match your ambition, skills, and pace.",
+    image: "/images/products/edulavo-hero.png",
+    imageAlt: "Edulavo — Your personal AI-powered skill coach",
+    badges: [{ text: "AI Powered learning", variant: "success" }
+    ],
     gridSpan: "small",
-    category: "New Generation",
+    category: "EdTech",
+    caseStudyHref: "https://www.edulavo.com/",
   },
-  {
-    id: "growfund",
-    title: "Growfund",
-    description: "A complete solution for crowdfunding and donations in WordPress.",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuBb4aW3mkqCL-QuxnZ4QFnNPFKRBMQw0P5JYWw5WcZEn92XQUERAP-K4U5LXVip9Z_Dtu2umSQJbSlk6yu5eAPm3LWUnvMq_eEZJm6rvi8sRwZctfMnNNyhCVKjM40CnNk3Xo2iCF9G57XjwvzTwuJxpHttwamQTqj79OQVzN7f1QtKFp2ervzptRmymP8ZdMQ_tN_4355HiwwXNuc1n7P4dINdZOHuqzk7wsqrKaRXmSTheGEfcD7Czt3SLQtt7-cmhEvc7rTo6Qs",
-    imageAlt: "Growfund Analytics",
-    badges: [{ text: "FinTech", variant: "default" }],
-    gridSpan: "small",
-    category: "FinTech",
-  },
+
 ];
+
+const visitCtaClassName =
+  "inline-flex items-center justify-center rounded-full bg-primary px-6 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:ring-offset-2 focus-visible:ring-offset-[#131313]";
 
 interface ProductCardProps {
   product: Product;
@@ -113,6 +107,17 @@ function ProductCard({ product }: ProductCardProps) {
               ))}
             </div>
           )}
+        </div>
+
+        <div className="mb-6 md:mb-8 shrink-0">
+          <Link
+            href={product.caseStudyHref}
+            className={visitCtaClassName}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Visit Now
+          </Link>
         </div>
 
         {/* Image Section */}
@@ -188,20 +193,10 @@ export default function Products() {
               size="2xl"
               className="text-3xl md:text-4xl lg:text-5xl font-bold text-white"
             >
-              Industry-Leading Products
+             Our Industry-Leading Products
             </SectionTitle>
           </div>
 
-          <Link
-            href="#"
-            className="flex items-center gap-2 text-gray-400 hover:text-primary transition-colors group text-sm md:text-base"
-          >
-            Explore other products
-            <ArrowRight
-              size={18}
-              className="group-hover:translate-x-1 transition-transform duration-300"
-            />
-          </Link>
         </div>
 
         {/* Products Grid */}
