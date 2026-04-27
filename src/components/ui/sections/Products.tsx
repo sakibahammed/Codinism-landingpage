@@ -66,8 +66,8 @@ function ProductCard({ product }: ProductCardProps) {
     <article
       role="listitem"
       className={`${gridSpanClass} ${
-        product.gradient ? `bg-gradient-to-br ${product.gradient}` : ""
-      } bg-card rounded-3xl overflow-hidden border border-border/10 group hover:border-primary/30 transition-all duration-300`}
+        product.gradient ? `bg-gradient-to-br ${product.gradient}` : "bg-[#1b1b1b]"
+      } rounded-3xl overflow-hidden border border-border/10 group hover:border-primary/30 transition-all duration-300`}
     >
       <div className={`p-6 md:p-10 ${isLarge ? "flex flex-col h-full" : ""}`}>
         {/* Header Section */}
@@ -161,7 +161,7 @@ function ProductCard({ product }: ProductCardProps) {
               {product.features.map((feature, index) => (
                 <div
                   key={index}
-                  className={`bg-card/90 backdrop-blur-md px-4 md:px-6 py-2 md:py-3 rounded-xl border border-[#ADFF2F]/20 ${
+                  className={`dark:bg-card/90 bg-[#1b1b1b]/90 backdrop-blur-md px-4 md:px-6 py-2 md:py-3 rounded-xl border border-[#ADFF2F]/20 ${
                     index === 1 ? "ml-8" : ""
                   }`}
                 >

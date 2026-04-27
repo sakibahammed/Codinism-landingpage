@@ -2,10 +2,10 @@
 
 import { SectionTitle } from "@/components/custom";
 import { Badge } from "@/components/ui/badge";
+import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
-import { useRef, useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface CaseStudy {
   id: string;
@@ -121,7 +121,7 @@ function CaseStudyCard({ caseStudy, index }: CaseStudyCardProps) {
       }}
     >
       <div
-        className="relative overflow-hidden rounded-3xl border border-border/20 bg-card"
+        className="relative overflow-hidden rounded-3xl border border-border/20 dark:bg-card bg-[#1b1b1b]"
         style={{
           transform: `scale(${scale})`,
           transformOrigin: "top center",
@@ -132,7 +132,9 @@ function CaseStudyCard({ caseStudy, index }: CaseStudyCardProps) {
           className={`relative grid grid-cols-1 ${isEven ? "lg:grid-cols-2" : "lg:grid-cols-2"} gap-0`}
         >
           {/* Image Section */}
-          <div className={`relative h-[250px] sm:h-[300px] lg:h-full ${!isEven ? "lg:order-2" : ""}`}>
+          <div
+            className={`relative h-[250px] sm:h-[300px] lg:h-full ${!isEven ? "lg:order-2" : ""}`}
+          >
             <Image
               src={caseStudy.image}
               alt={caseStudy.imageAlt}
